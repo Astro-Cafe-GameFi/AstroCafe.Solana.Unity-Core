@@ -1,0 +1,7 @@
+.vs
+AstroCafe.Solana.Unity/bin/
+AstroCafe.Solana.Unity/obj/
+Test/Library/
+Test/Logs/
+Test/obj/
+Test/Temp/
