@@ -19,7 +19,7 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Connector.url = "https://Astro-Cafe-GameFi.github.io/AstroCafe.Solana.Web3.Connect/";
+        Connector.url = "https://astro-cafe-gamefi.github.io/AstroCafe.Solana.Web3.Connect/";
     }
 
     async Task<SignResult> Sign(string message)
