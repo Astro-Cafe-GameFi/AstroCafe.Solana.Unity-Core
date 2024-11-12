@@ -55,5 +55,25 @@ namespace AstroCafe.Solana.Unity
             else
                 throw new Exception("transaction error");
         }
+
+        public static async Task<string> SendMultiSignTransaction(NetworkId _networkId, string _txMessage)
+        {
+            // open application
+            Application.OpenURL(url + "?action=sendMultiSign" + "&networkId=" + (int)_networkId + "&txMessage=" + _txMessage);
+            // set clipboard to empty
+            GUIUtility.systemCopyBuffer = "";
+            // wait for clipboard response
+            var clipBoard = "";
+            while (clipBoard == "")
+            {
+                clipBoard = GUIUtility.systemCopyBuffer;
+                await Task.Delay(100);
+            }
+            // check if clipboard response is valid
+            if (clipBoard.Length == 87 || clipBoard.Length == 88)
+                return clipBoard;
+            else
+                throw new Exception("transaction error");
+        }
     }
 }
