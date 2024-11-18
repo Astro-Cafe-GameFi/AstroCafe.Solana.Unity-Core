@@ -671,7 +671,8 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Standalone: 0
   il2cppCompilerConfiguration: {}
   managedStrippingLevel:
     EmbeddedLinux: 1
@@ -768,7 +769,7 @@ PlayerSettings:
   luminVersion:
     m_VersionCode: 1
     m_VersionName: 
-  apiCompatibilityLevel: 3
+  apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
   cloudProjectId: e68e569f-4e76-458e-8760-174ea91de90d
