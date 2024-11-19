@@ -56,10 +56,10 @@ namespace AstroCafe.Solana.Unity
                 throw new Exception("transaction error");
         }
 
-        public static async Task<string> SendMultiSignTransaction(NetworkId _networkId, string _txMessage)
+        public static async Task<string> SendTransactionByBlockhash(NetworkId _networkId, string _txMessage)
         {
             // open application
-            Application.OpenURL(url + "?action=sendMultiSign" + "&networkId=" + (int)_networkId + "&txMessage=" + _txMessage);
+            Application.OpenURL(url + "?action=sendbyblock" + "&networkId=" + (int)_networkId + "&txMessage=" + _txMessage);
             // set clipboard to empty
             GUIUtility.systemCopyBuffer = "";
             // wait for clipboard response

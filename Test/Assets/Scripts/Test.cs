@@ -157,7 +157,7 @@ public class Test : MonoBehaviour
     {
         var challengeService = new ChallengeService();
         var result = await challengeService.ProcessChallengeClaim("http://localhost:4040", "V1StGXR8_Z5jdHi7B-myQ");
-        var txHash = await Connector.SendMultiSignTransaction(Connector.NetworkId.Devnet, result);
+        var txHash = await Connector.SendTransactionByBlockhash(Connector.NetworkId.Devnet, result);
         if (txHash != null)
         {
             print("txHash: " + txHash);
